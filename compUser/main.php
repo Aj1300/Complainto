@@ -1,0 +1,133 @@
+<?php
+include('sessionn.php');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>Home</title>
+<style>
+       body{
+  font-family:Arial; 
+  background: -webkit-linear-gradient(to top right, #50bee6, #80ff80); 
+  background: linear-gradient(to right, #50bee6, #80ff80); 
+        }
+        nav {
+    justify-self: normal;
+    background-color: #80ff80;
+    padding: 20px 0; /* Increase the top and bottom padding */
+    font-size: 18px; /* Increase the font size */
+}
+       #aa{
+    color: #60e488;
+   }
+   .n{
+    color:black;
+   }
+
+   /* Updated styles for the content block */
+   .content-block {
+    color:#50bee6;
+    background-color: rgb(0 0 0 / 55%);
+       padding: 189px;
+    margin-top: 120px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 0px;
+    border-radius: 106px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+   }
+   .foo, footer.bg-body-tertiary {
+            background-color: transparent !important; /* Override Bootstrap background color */
+        }
+        .nav-link.service {
+        font-weight: bold;
+    }
+    .dropdown-menu{
+      background-color: rgb(0 0 0 / 22%);
+
+    }
+
+</style>
+</head>
+
+<body >
+  <header>
+  <nav class="navbar navbar-expand-lg fixed-top trans-navigation">
+    <div class="container">
+        <a class="navbar-brand" href="main.php" >
+            <img src="assets/img/logo.png" alt="" class="img-fluid b-logo">COmplainto
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+                <i class="fa fa-bars"></i>
+            </span>
+          </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="mainNav">
+            <ul class="navbar-nav" id="navui">
+                <li class="nav-item">
+                    <a class="nav-link smoth-scroll" href="service.html">Service</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link smoth-scroll" href="contact.html">Contact</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarWelcome" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Account
+                  </a>
+                  <div class="dropdown-menu"  aria-labelledby="navbarWelcome">
+                    <a class="dropdown-item " href="editprofile.php">
+                      edit profile
+                  </a> 
+                      <a class="dropdown-item " href="logout.php">
+                          Log Out
+                      </a> 
+                  </div>
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class ="btn1">
+      <button class="btn btn-primary"><a href="complaintform.php" id="aa" >Add complaint</a></button>
+    </div>
+</nav>
+</header>
+
+<!-- New content block -->
+<div class="content-block">
+  <h1 style="color: #80ff80;">Hello,<?php
+      echo $_SESSION['username']; // Print the value of the session variable
+    ?></h1>
+<p style="font-size:large;">Welcome to COmplainto, your premier destination for registering complaints related to private
+     building grievances.Our platform is dedicated to addressing issues concerning water, electricity,
+      and environmental concerns within private buildings. At COmplainto, we understand the importance 
+      of efficient resolution for such vital matters, ensuring the comfort and safety of residents. 
+      With our user-friendly interface, residents can easily submit their complaints, providing detailed 
+      information to expedite the resolution process. Our dedicated team is committed to promptly addressing 
+      each complaint, striving to enhance the living standards within private buildings. Join us at 
+      COmplainto and contribute to fostering a healthier, more sustainable living environment for all.</p>
+</div>
+<div class="foo">
+    <footer class="bg-body-tertiary text-center">
+        <!-- Grid container -->
+        <div class="container p-4"></div>
+        <!-- Grid container -->
+      
+        <!-- Copyright -->
+        <div class="text-center p-3" >
+          © 2024 Copyright:
+          <a class="text-body" href="main.php">COmplainto.com</a>
+        </div>
+        <!-- Copyright -->
+      </footer>
+</div>
+</body>
+</html>
